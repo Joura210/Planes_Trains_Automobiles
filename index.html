@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Time, is on my side</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link style sheets: Bootstrap, Reset, Personal -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    
+</head>
+<body>
+
+    <!-- Begin container for Bootstrap -->
+  <div class="container">
+<!-- Table to house old/new times -->
+    <table class="table table-dark">
+            <thead> <h2>Current Schedule</h2>
+            <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+            </tr>
+            </tbody>
+        </table>
+
+    <!-- Form to inout new times -->
+    <form> <h2>Add Train</h2> 
+            <div class="form-group">
+              <label for="trainName">Train Name</label>
+              <input type="text" class="form-control" id="newTrain" aria-describedby="newTrain">
+              
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Destination</label>
+              <input type="text" class="form-control" id="newDestination">
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+      <!-- End initial container -->
+  </div>
+    
+
+
+
+
+
+
+
+<!-- Link Bootstrap, jQuery, javascript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+ <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
