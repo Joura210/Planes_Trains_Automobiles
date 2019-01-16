@@ -66,28 +66,31 @@ $(document).ready(function () {
     console.log(tripLength);
     console.log(firstTime);
 
-    var newTrip = $("<tr>").append(
-        $("<td>").text(trainName),
-        $("<td>").text(destination),
-        $("<td>").text(tripLength),
-        $("<td>").text(firstTime),
+    // var newTrip = $("<tr>").append(
+    //     $("<td>").text(trainName),
+    //     $("<td>").text(destination),
+    //     $("<td>").text(tripLength),
+    //     $("<td>").text(nextTrain),
+    //     $("<td>").text(tMinutesTillTrain),
+        
 
-    );
+    // );
 
-    $("#trainTable > tbody").append(newTrip);
+    // $("#trainTable > tbody").append(newTrip);
 
-    var tFrequency = 3;
+    var tFrequency = tripLength;
 
-    // Time is 3:30 AM
-    var firstTime = "03:30";
+    
+    // var firstPick = firstTime;
 
     // First Time (pushed back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
     console.log(firstTimeConverted);
+    console.log("-----------");
 
     // Current Time
     var currentTime = moment();
-    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+    console.log("CURRENT TIME: " + moment(currentTime).format("LT"));
 
     // Difference between the times
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
@@ -100,10 +103,24 @@ $(document).ready(function () {
     // Minute Until Train
     var tMinutesTillTrain = tFrequency - tRemainder;
     console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+    console.log("-------");
 
     // Next Train
-    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("LT");
+
+    console.log("ARRIVAL TIME: " + moment(nextTrain).format("LT"));
+
+    var newTrip = $("<tr>").append(
+        $("<td>").text(trainName),
+        $("<td>").text(destination),
+        $("<td>").text(tripLength),
+        $("<td>").text(nextTrain),
+        $("<td>").text(tMinutesTillTrain),
+        
+
+    );
+
+    $("#trainTable > tbody").append(newTrip);
     
   });
 
